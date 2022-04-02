@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\logowanie\" />
+    <Folder Include="Models\kontoPacjenta\" />
+    <Folder Include="repositories\kontoPacjenta\" />
+    <Folder Include="Views\logowanie\layout\" />
+    <Folder Include="Views\logowanie\scripts\" />
+    <Folder Include="Views\logowanie\viewModel\" />
+  </ItemGroup>
+
+</Project>
