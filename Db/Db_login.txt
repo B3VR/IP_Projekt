@@ -1,3 +1,0 @@
-Server name: ipproj.database.windows.net
-Username: dbo_uer
-Password: Password123
