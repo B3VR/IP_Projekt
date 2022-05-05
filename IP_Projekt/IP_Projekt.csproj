@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\logowanie\" />
-    <Folder Include="Models\kontoPacjenta\" />
+    <Folder Include="Models\" />
     <Folder Include="repositories\kontoPacjenta\" />
-    <Folder Include="Views\logowanie\layout\" />
-    <Folder Include="Views\logowanie\scripts\" />
-    <Folder Include="Views\logowanie\viewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="6.0.4" />
   </ItemGroup>
 
 </Project>

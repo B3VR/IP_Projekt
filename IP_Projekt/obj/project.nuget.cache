@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "XyUMvUxCeNE7ohKJ3323T+1cOXH86G0dDkoOyHIhrMu3CBE0KXCJ8PYhrE62A+mGwIFJ9E0K7QzcrBwDgYaBKQ==",
+  "dgSpecHash": "VQ7PygOSP+FmNsLFwG6iX4QNQfqkV0l4Ua5IhhoocXXelH7ZU1BNOV9bwri0EaxIfiPmagUHmNcfHyiQJrpfNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Krystian\\source\\repos\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.4\\microsoft.aspnetcore.connections.abstractions.6.0.4.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\6.0.4\\microsoft.aspnetcore.signalr.common.6.0.4.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.extensions.features\\6.0.4\\microsoft.extensions.features.6.0.4.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\system.io.pipelines\\6.0.2\\system.io.pipelines.6.0.2.nupkg.sha512",
+    "C:\\Users\\Krystian\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -15,16 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Czat/Czat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3phdFxDemF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Home/Rejestracja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWplc3RyYWNqYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Pulpit/Pulpit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVscGl0XFB1bHBpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krystian/source/repos/IP_Projekt/IP_Projekt/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,5 +1,4 @@
-﻿using IP_Projekt.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace IP_Projekt.Controllers
@@ -17,16 +16,10 @@ namespace IP_Projekt.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        
+        public IActionResult Rejestracja()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
