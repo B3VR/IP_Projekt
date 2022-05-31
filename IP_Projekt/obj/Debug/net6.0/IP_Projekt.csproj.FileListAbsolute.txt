@@ -24,3 +24,8 @@ C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\obj\Debug\net6.0\refint\IP_
 C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\obj\Debug\net6.0\IP_Projekt.pdb
 C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\obj\Debug\net6.0\IP_Projekt.genruntimeconfig.cache
 C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\obj\Debug\net6.0\ref\IP_Projekt.dll
+C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\Krystian\source\repos\IP_Projekt\IP_Projekt\obj\Debug\net6.0\IP_Projekt.csproj.CopyComplete
