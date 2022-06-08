@@ -1,7 +1,15 @@
+using IP_Projekt.DB;
+using IP_Projekt.DB.Repositories.DLoginRepositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<IpprojContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("ipprojCS"))
+    );
+builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
 
 var app = builder.Build();
 
