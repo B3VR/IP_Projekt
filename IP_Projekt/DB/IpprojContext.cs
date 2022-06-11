@@ -9,6 +9,7 @@ namespace IP_Projekt.DB
         {
         }
         public DbSet<DLogin> dLogins { get; set; }
-
+        public DbSet<Msg> Msgs { get; set; } 
+        public DbSet<Chat> Chats { get; set; }
     }
 }
