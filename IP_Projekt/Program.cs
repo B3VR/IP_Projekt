@@ -1,4 +1,5 @@
 using IP_Projekt.DB;
+using IP_Projekt.DB.Repositories.ChatRepositories;
 using IP_Projekt.DB.Repositories.DLoginRepositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<IpprojContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("ipprojCS"))
     );
 builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
+builder.Services.AddTransient<IChatRepository, ChatRepository>();
 
 var app = builder.Build();
 
