@@ -1898,24 +1898,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Krystian\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kinga\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Krystian\\source\\repos\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\kinga\\OneDrive\\Dokumenty\\GitHub\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
       "projectName": "IP_Projekt",
-      "projectPath": "C:\\Users\\Krystian\\source\\repos\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
-      "packagesPath": "C:\\Users\\Krystian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Krystian\\source\\repos\\IP_Projekt\\IP_Projekt\\obj\\",
+      "projectPath": "C:\\Users\\kinga\\OneDrive\\Dokumenty\\GitHub\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
+      "packagesPath": "C:\\Users\\kinga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kinga\\OneDrive\\Dokumenty\\GitHub\\IP_Projekt\\IP_Projekt\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Krystian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\kinga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1923,8 +1918,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/aspnetvnext/api/v2/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

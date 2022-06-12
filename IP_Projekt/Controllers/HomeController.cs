@@ -21,7 +21,6 @@ namespace IP_Projekt.Controllers
 
         public IActionResult Index()
         {
-            
             return View();
         }
         
