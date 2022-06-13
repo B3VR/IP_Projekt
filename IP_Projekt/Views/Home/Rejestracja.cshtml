@@ -1,2 +1,35 @@
 ﻿@model RejestracjaViewModel
 
+<div class = "cointainer mt-5">
+    <div class = "row justify-content-center align-items-center>
+        <div class = "col-sm-12 col-md-12 col-lg-4">
+            <h1 class = "mb-3" >Rejestracja</h1>
+            <form method="post"></form>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+            <div class = "mb-3">
+                <label class="form-label" asp-for = "email">Adres email:</label>
+                <input type="text" asp-for = "email" class="form-control"/>
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+
+            <div class = "mb-3">
+                <label class="form-label" asp-for = "haslo">Hasło:</label>
+                <input type="password" asp-for = "haslo" class="form-control"/>
+                <span asp-validation-for="haslo" class="text-danger"></span>
+            </div>
+
+            <div class = "mb-3">
+                <label class="form-label" asp-for = "potwierdz_haslo">Powtórz hasło:</label>
+                <input type="password" asp-for = "potwierdz_haslo" class="form-control"/>
+                <span asp-validation-for="potwierdz_haslo" class="text-danger"></span>
+            </div>
+
+            <div class = "mb-3">
+                <button type="submit" class="btn btn-primary">Zarejestruj konto</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
