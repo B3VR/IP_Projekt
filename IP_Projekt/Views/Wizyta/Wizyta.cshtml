@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="card h-100 w-100">
+    <div class="card-header h-25">
+        <h3>Pacjent: Krystian Miszta</h3>
+    </div>
+    <div class="card-body h-75">
+        <div class="row">
+            <div class="card col-7 bg-light">
+                <div class="row" style="height: 200px">
+                    <div class="col">
+                        <label>Przebieg wizyty</label>
+                        <textarea class="h-100 w-75 form-control"></textarea>
+                    </div>
+                    <div class="col">
+                        <label>Przepisane leki</label>
+                        <textarea class="h-100 w-75 form-control"></textarea>
+                    </div>
+                </div>
+               <div class="h-50 w-75 mt-5">
+                   <label>Stwierdzona choroba</label>
+                   <select class="w-50 form-control">
+                       <option>I15 Nadciśnienie wtórne</option>
+                       <option>I20 Choroba niedokrwienna serca</option>
+                       <option>I22 Ponowny zawał serca</option>
+                   </select>
+               </div>
+            </div>
+            <div class="col-5">   
+                @Html.Partial("~/Views/Chat/ChatPartialView.cshtml")
+            </div>
+        </div>
+    </div>
+    <button class="w-100 btn btn-danger align-bottom">Zakończ Wizytę</button>
+</div>

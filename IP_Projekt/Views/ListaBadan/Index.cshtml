@@ -1,0 +1,54 @@
+﻿@model IEnumerable<IP_Projekt.DB.Models.Badania>
+
+@{
+    ViewData["Title"] = "BadaniaIndex";
+}
+
+<h1>Lista badań</h1>
+
+<p>
+    <a asp-action="Create">Dodaj badanie</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lekarz)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacjent)
+            </th>
+     
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+       
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lekarz)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Pacjent)
+            </td>
+           
+           
+            <td>
+                @Html.ActionLink("Gotowe", "Done", new {  id=item.BadanieId }) |
+                @Html.ActionLink("Edytuj", "Edit", new {  id=item.BadanieId }) |
+                @Html.ActionLink("Sczegóły", "Details", new { id=item.BadanieId }) |
+                @Html.ActionLink("Usuń", "Delete", new { id=item.BadanieId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

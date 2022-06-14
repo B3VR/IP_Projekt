@@ -1,0 +1,60 @@
+﻿@model IP_Projekt.DB.Models.Badania
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Szczegóły badania</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pacjent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pacjent)
+        </dd>
+      
+          <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lekarz)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lekarz)
+        </dd>
+
+          <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sala)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sala)
+        </dd>
+
+          <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Godzina)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Godzina)
+        </dd>
+
+          <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.BadanieId }) |
+    <a asp-action="Index">Wróć do listy zadań</a>
+</div>
