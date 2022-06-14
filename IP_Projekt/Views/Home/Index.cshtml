@@ -1,10 +1,32 @@
-﻿@model LogowanieViewModel
+﻿@model RejestracjaViewModel
 @{
     ViewData["Title"] = "Logowanie";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <a class="nav-link text-dark" asp-area="" asp-controller="Pulpit" asp-action="Pulpit">Zaloguj</a>
-    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Rejestracja">Zarejestruj</a>
+<div class = "cointainer mt-5">
+    <div class = "row justify-content-center align-items-center>
+        <div class = "col-sm-12 col-md-12 col-lg-4">
+            <h1 class = "mb-3" >Logowanie</h1>
+            <form method="post"></form>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+            <div class = "mb-3">
+                <label class="form-label" asp-for = "email">Adres email:</label>
+                <input type="text" asp-for = "email" class="form-control"/>
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+
+            <div class = "mb-3">
+                <label class="form-label" asp-for = "haslo">Hasło:</label>
+                <input type="password" asp-for = "haslo" class="form-control"/>
+                <span asp-validation-for="haslo" class="text-danger"></span>
+            </div>
+
+            <div class = "mb-3">
+                <a asp-controller="Pulpit" asp-action="Pulpit" type="submit" class="btn btn-primary">Zaloguj</a>
+                <a asp-controller="Home" asp-action="Rejestracja" type="submit">Zarejestruj</a>
+            </div>
+
+        </div>
+    </div>
 </div>

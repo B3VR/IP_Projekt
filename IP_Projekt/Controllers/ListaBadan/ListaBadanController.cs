@@ -44,8 +44,6 @@ namespace IP_Projekt.Controllers.ListaBadan
             badanieModel.BadanieId = Listabadan.Count + 1;
             Listabadan.Add(badanieModel);
                 return RedirectToAction(nameof(Index));
-            
-         
         }
 
         // GET: ListaBadanController/Edit/5
