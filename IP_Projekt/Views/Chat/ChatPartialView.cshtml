@@ -1,14 +1,51 @@
 ﻿@{
 }
 
- <form class="container h-100">
-      <div class="card h-100">
-          <div class="card-header h-100">
-              <ul class="list-group">
-                 
-              </ul>
+ <form class="container">
+      <div class="card">
+          <div class="card-header">
+              <div class="list-group overflow-auto" style="height: 400px">
+                      @{
+                          @for (int i = 0; i < 3; i++)
+                          {
+
+                              <div class="w-100 mt-3">
+                                    <div class="list-group-item list-group-item-success w-50 float-end">
+                                        <label>Krystian Miszta</label>
+                                        <div>
+                                            <small>Dzień dobry, mam gorączkę i bóle mięśniowe</small>
+                                        </div>
+                                    </div>
+                              </div>
+                                <div class="w-100 mt-3">
+                                    <div class="list-group-item list-group-item-primary w-50 float-start">
+                                        <label>Ty</label>
+                                        <div>
+                                            <small>Czy, wystąpił u Pana kaszel lub katar ?</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100 mt-3">
+                                    <div class="list-group-item list-group-item-success w-50 float-end">
+                                        <label>Krystian Miszta</label>
+                                        <div>
+                                            <small>Tak, obydwa z objawów</small>
+                                        </div>
+                                    </div>
+                              </div>
+                                <div class="w-100 mt-3">
+                                    <div class="list-group-item list-group-item-primary w-50 float-start">
+                                        <label>Ty</label>
+                                        <div>
+                                            <small>Czy miał Pan kontakt z osobą, u której stwierdzono Covid-19 ?</small>
+                                        </div>
+                                    </div>
+                                </div>
+                          }
+                      }    
+              </div>
           </div>
-          <div class="card-body h-auto">
+          <div class="card-body">
               <div class="row">
                 <div class="col-10">
                     <input class="form-control" id="messageTxt" placeholder="Wpisz wiadomość"></input>
@@ -18,6 +55,6 @@
                 </div>
               </div>
           </div>
-      </div>
+        </div>
  </form>
 
