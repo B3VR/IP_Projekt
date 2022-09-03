@@ -1,4 +1,5 @@
 ﻿
+using IP_Projekt.DB.Models;
 using IP_Projekt.Views.Home.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -8,14 +9,16 @@ namespace IP_Projekt.Controllers.AccountController
     public class AccountController : Controller
     {
         //--------------------------------------------
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
+        
 
-        public AccountController(UserManager<IdentityUser> userManager,
-                                      SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<User> userManager,
+                                      SignInManager<User> signInManager)
         {
-            _userManager = userManager;
             _signInManager = signInManager;
+            _userManager = userManager;
+            
         }
         //--------------------------------------------
         public IActionResult Register()
@@ -28,7 +31,7 @@ namespace IP_Projekt.Controllers.AccountController
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser
+                var user = new User
                 {
                     UserName = model.Email,
                     Email = model.Email,
@@ -51,7 +54,7 @@ namespace IP_Projekt.Controllers.AccountController
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
 
             }
-            return View(model);
+            return View("~/Views/Home/Rejestracja.cshtml", model);
         }
         //--------------------------------------------
         [HttpGet]
@@ -76,7 +79,7 @@ namespace IP_Projekt.Controllers.AccountController
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
 
             }
-            return View(user);
+            return View("~/Views/Home/Index.cshtml", user);
         }
         //--------------------------------------------
         public async Task<IActionResult> Logout()

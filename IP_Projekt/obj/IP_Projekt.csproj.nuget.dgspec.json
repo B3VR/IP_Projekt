@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guma8\\Documents\\Rzeczy\\Studia\\IP_KRYSTIAN\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj": {}
+    "C:\\Users\\Krystian\\Desktop\\Nowy folder\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guma8\\Documents\\Rzeczy\\Studia\\IP_KRYSTIAN\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj": {
+    "C:\\Users\\Krystian\\Desktop\\Nowy folder\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guma8\\Documents\\Rzeczy\\Studia\\IP_KRYSTIAN\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
+        "projectUniqueName": "C:\\Users\\Krystian\\Desktop\\Nowy folder\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
         "projectName": "IP_Projekt",
-        "projectPath": "C:\\Users\\guma8\\Documents\\Rzeczy\\Studia\\IP_KRYSTIAN\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
-        "packagesPath": "C:\\Users\\guma8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guma8\\Documents\\Rzeczy\\Studia\\IP_KRYSTIAN\\IP_Projekt\\IP_Projekt\\obj\\",
+        "projectPath": "C:\\Users\\Krystian\\Desktop\\Nowy folder\\IP_Projekt\\IP_Projekt\\IP_Projekt.csproj",
+        "packagesPath": "C:\\Users\\Krystian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krystian\\Desktop\\Nowy folder\\IP_Projekt\\IP_Projekt\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\guma8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Krystian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aspnetvnext/api/v2/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -40,6 +45,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNet.Identity.AspNetCoreCompat": {
+              "target": "Package",
+              "version": "[0.3.4, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
             "Microsoft.AspNetCore.SignalR.Common": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -51,6 +72,14 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.8, )"
             },
@@ -77,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

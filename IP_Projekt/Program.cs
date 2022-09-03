@@ -1,12 +1,13 @@
+using IP_Projekt;
 using IP_Projekt.DB;
+using IP_Projekt.DB.Models;
 using IP_Projekt.DB.Repositories.ChatRepositories;
 using IP_Projekt.DB.Repositories.DLoginRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -15,7 +16,9 @@ builder.Services.AddDbContext<IpprojContext>(
     );
 builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
 builder.Services.AddTransient<IChatRepository, ChatRepository>();
-//builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddUserStore<IpprojContext>();
+builder.Services.AddDefaultIdentity<User>().AddEntityFrameworkStores<IpprojContext>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
