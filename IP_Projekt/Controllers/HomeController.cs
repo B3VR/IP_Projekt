@@ -4,6 +4,7 @@ using IP_Projekt.DB.Repositories.DLoginRepositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+
 namespace IP_Projekt.Controllers
 {
     public class HomeController : Controller
@@ -23,7 +24,9 @@ namespace IP_Projekt.Controllers
         {
             return View();
         }
+        //Tu są dodane rzeczy
         
+        //
         public IActionResult Rejestracja()
         {
             return View();
