@@ -24,9 +24,7 @@ namespace IP_Projekt.Controllers
         {
             return View();
         }
-        //Tu są dodane rzeczy
-        
-        //
+
         public IActionResult Rejestracja()
         {
             return View();

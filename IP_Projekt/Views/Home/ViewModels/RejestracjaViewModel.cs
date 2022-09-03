@@ -5,18 +5,18 @@ namespace IP_Projekt.Views.Home.ViewModels
 {
     public class RejestracjaViewModel
     {
+        
         [Required]
-        [DataType(DataType.EmailAddress)]
-        public string email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        public string haslo { get; set; }
-
+        [EmailAddress]
+        public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [Compare(nameof(haslo), ErrorMessage = "Przy potwierdzaniu wpisz takie samo hasło jak w polu powyżej")]
-        public string potwierdz_haslo { get; set; }
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm Password")]
+        [Compare("Password", ErrorMessage = "Przy potwierdzaniu wpisz takie samo hasło jak w polu powyżej")]
+        public string ConfirmPassword { get; set; }
 
 
     }

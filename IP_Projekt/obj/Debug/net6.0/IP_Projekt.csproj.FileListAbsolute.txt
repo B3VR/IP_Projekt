@@ -922,3 +922,4 @@ C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\obj\Deb
 C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\obj\Debug\net6.0\IP_Projekt.pdb
 C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\obj\Debug\net6.0\IP_Projekt.genruntimeconfig.cache
 C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\obj\Debug\net6.0\ref\IP_Projekt.dll
+C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

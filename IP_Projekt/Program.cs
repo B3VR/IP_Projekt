@@ -1,6 +1,7 @@
 using IP_Projekt.DB;
 using IP_Projekt.DB.Repositories.ChatRepositories;
 using IP_Projekt.DB.Repositories.DLoginRepositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,7 @@ builder.Services.AddDbContext<IpprojContext>(
     );
 builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
 builder.Services.AddTransient<IChatRepository, ChatRepository>();
-
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddUserStore<IpprojContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +32,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",
