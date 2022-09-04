@@ -1,17 +1,31 @@
-﻿using Microsoft.AspNetCore.Identity;
-namespace IP_Projekt.DB.Models
+﻿
+using IP_Projekt.DB.Models;
+using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
+
+public class User: IdentityUser
 {
+    [Column("user_type")]
+    private user_type Typ { get; set; }
+    [Column("Imie")]
+    private string imie { get; set; }
+    [Column("Nazwisko")]
+    private string nazwisko { get; set; }
 
-    
-
-    public class User: IdentityUser
+    public User(user_type typ, string userName)
     {
-        private user_type Typ { get; set; }
-        public User(/*String Email, String loc_password, user_type loc_type*/)
-        {
-            //this.Email = loc_email;
-            //this.PasswordHash = loc_password;
-            //this.Typ = loc_type;
-        }
+        this.Typ = typ;
+        this.UserName = userName;
+    }
+
+    public User(string email, string userName)
+    {
+        this.Email = email;
+        this.UserName = userName;   
+    }
+
+    public User()
+    {
+
     }
 }
