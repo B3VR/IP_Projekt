@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+//using IP_Projekt.DB.Models;
 
 namespace IP_Projekt.Views.Home.ViewModels
 {
@@ -23,6 +24,9 @@ namespace IP_Projekt.Views.Home.ViewModels
 
         [Required]
         public string LastName { get; set; }
+
+        [Required]
+        public string loc_typ { get; set; }
 
     }
 }

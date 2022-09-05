@@ -1,33 +1,42 @@
-﻿
+﻿using Microsoft.AspNetCore.Identity;
+
+
 using IP_Projekt.DB.Models;
+using Microsoft.AspNetCore.Identity;
+
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class User: IdentityUser
+namespace IP_Projekt.DB.Models
 {
 
-
-    [Column("user_type")]
-    private user_type Typ { get; set; }
-    //[Column("Imie")]
-    //private string imie { get; set; }
-    //[Column("Nazwisko")]
-    //private string nazwisko { get; set; }
-
-    public User(user_type typ, string userName)
+    public class User : IdentityUser
     {
-        this.Typ = typ;
-        this.UserName = userName;
+        [Column("user_type")]
+        private user_type Typ { get; set; }
+        [Column("Imie")]
+        private string imie { get; set; }
+        [Column("Nazwisko")]
+        private string nazwisko { get; set; }
+
+        public user_type GetTyp()
+        {
+            return Typ;
+        }
+
+        public void setTyp(user_type loc_typ)
+        {
+            this.Typ = loc_typ;
+        }
+
+
+        public User(user_type typ, string userName)
+        {
+            this.Typ = typ;
+            this.UserName = userName;
+        }
+        public User() { }
     }
 
-    public User(string email, string userName)
-    {
-        this.Email = email;
-        this.UserName = userName;   
-    }
-
-    public User()
-    {
-
-    }
 }
+

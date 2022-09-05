@@ -19,6 +19,7 @@ namespace IP_Projekt.Controllers.AccountController
             _signInManager = signInManager;
             _userManager = userManager;
             
+            
         }
         //--------------------------------------------
         public IActionResult Register()
@@ -36,14 +37,22 @@ namespace IP_Projekt.Controllers.AccountController
                     UserName = model.FirstName + model.LastName,
                     Email = model.Email,
                 };
+                
+
 
                 var result = await _userManager.CreateAsync(user, model.Password);
+
+                if (model.loc_typ == "lekarz")  { user.setTyp(user_type.lekarz); }
+                if (model.loc_typ == "pacjent") { user.setTyp(user_type.pacjent); }
+
+                await _userManager.UpdateAsync(user);
 
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
-                    return RedirectToAction("index", "Home");
+                    //return RedirectToAction("index", "Home");
+                    return RedirectToAction("Welcome", "Home");
                 }
 
                 foreach (var error in result.Errors)
@@ -67,7 +76,6 @@ namespace IP_Projekt.Controllers.AccountController
         [AllowAnonymous]
         public async Task<IActionResult> Login(LogowanieViewModel user)
         {
-            
             if (ModelState.IsValid)
             {
 
@@ -88,7 +96,8 @@ namespace IP_Projekt.Controllers.AccountController
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    //return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Welcome", "Home");
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");

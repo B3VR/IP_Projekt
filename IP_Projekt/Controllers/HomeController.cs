@@ -29,5 +29,10 @@ namespace IP_Projekt.Controllers
         {
             return View();
         }
+
+        public IActionResult Welcome()
+        {
+            return View();
+        }
     }
 }

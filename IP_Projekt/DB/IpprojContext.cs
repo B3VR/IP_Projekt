@@ -15,6 +15,8 @@ namespace IP_Projekt.DB
             modelBuilder.Entity<IdentityUserClaim<string>>().HasKey(p => new { p.Id });
         }
 
+
+
         
         public IpprojContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
