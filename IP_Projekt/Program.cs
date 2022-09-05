@@ -17,6 +17,8 @@ builder.Services.AddDbContext<IpprojContext>(
 builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
 builder.Services.AddTransient<IChatRepository, ChatRepository>();
 builder.Services.AddDefaultIdentity<User>().AddEntityFrameworkStores<IpprojContext>();
+//builder.Services.AddIdentity<User<string>, IdentityRole<string>>()
+//                    .AddEntityFrameworkStores<IpprojContext>();
 
 
 var app = builder.Build();

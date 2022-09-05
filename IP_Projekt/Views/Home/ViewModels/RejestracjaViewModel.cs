@@ -18,6 +18,11 @@ namespace IP_Projekt.Views.Home.ViewModels
         [Compare("Password", ErrorMessage = "Przy potwierdzaniu wpisz takie samo hasło jak w polu powyżej")]
         public string ConfirmPassword { get; set; }
 
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
 
     }
 }

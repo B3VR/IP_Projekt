@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IP_Projekt.DB.Models
@@ -26,5 +27,14 @@ namespace IP_Projekt.DB.Models
         
         [Required]
         public int chat_ID { get; set; }
+
+        //--------------------------------
+        [Table("IdentityUserClaim", Schema = "ManagementStudio")]
+        public class UserClaims : IdentityUserClaim<string>
+        {
+            [Key]
+            public override int Id { get; set; }
+        }
+        //--------------------------------
     }
 }

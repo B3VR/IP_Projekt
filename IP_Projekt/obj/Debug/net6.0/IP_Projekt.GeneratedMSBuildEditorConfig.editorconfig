@@ -8,65 +8,65 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IP_Projekt
 build_property.RootNamespace = IP_Projekt
-build_property.ProjectDir = C:\Users\Krystian\Desktop\Nowy folder\IP_Projekt\IP_Projekt\
+build_property.ProjectDir = C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Krystian\Desktop\Nowy folder\IP_Projekt\IP_Projekt
+build_property.MSBuildProjectDirectory = C:\Users\guma8\Documents\Rzeczy\Studia\IP_KRYSTIAN\IP_Projekt\IP_Projekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Chat/ChatPartialView.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Chat/ChatPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0UGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Home/Index.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Home/Rejestracja.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Home/Rejestracja.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWplc3RyYWNqYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/ListaBadan/Create.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/ListaBadan/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFCYWRhblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/ListaBadan/Delete.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/ListaBadan/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFCYWRhblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/ListaBadan/Details.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/ListaBadan/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFCYWRhblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/ListaBadan/Edit.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/ListaBadan/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFCYWRhblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/ListaBadan/Index.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/ListaBadan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFCYWRhblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Pulpit/Pulpit.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Pulpit/Pulpit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVscGl0XFB1bHBpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Wizyta/Wizyta.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Wizyta/Wizyta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2l6eXRhXFdpenl0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/_ViewImports.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/_ViewStart.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/Desktop/Nowy folder/IP_Projekt/IP_Projekt/Views/Shared/_Layout.cshtml]
+[C:/Users/guma8/Documents/Rzeczy/Studia/IP_KRYSTIAN/IP_Projekt/IP_Projekt/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-t7pg6d2dd2

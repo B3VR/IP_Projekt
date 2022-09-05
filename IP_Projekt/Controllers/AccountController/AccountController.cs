@@ -33,7 +33,7 @@ namespace IP_Projekt.Controllers.AccountController
             {
                 var user = new User
                 {
-                    UserName = model.Email,
+                    UserName = model.FirstName + model.LastName,
                     Email = model.Email,
                 };
 
@@ -67,9 +67,24 @@ namespace IP_Projekt.Controllers.AccountController
         [AllowAnonymous]
         public async Task<IActionResult> Login(LogowanieViewModel user)
         {
+            
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, user.RememberMe, false);
+
+                //var user2 = await _userManager.FindByEmailAsync(user.Email);
+                //var result = await _userManager.CreateAsync(user2, user.Password);
+
+                //if (result.Succeeded)
+                //{
+                //    await _signInManager.SignInAsync(user2, isPersistent: false);
+
+                //    return RedirectToAction("index", "Home");
+                //}
+
+                //var user2 = _signInManager.UserManager.Users.Where(u=>u.Email == user.Email).FirstOrDefault();
+                var user2 = await _userManager.FindByEmailAsync(user.Email);
+                var result = await _signInManager.PasswordSignInAsync(user2.UserName, user.Password, user.RememberMe, false);
+
 
                 if (result.Succeeded)
                 {

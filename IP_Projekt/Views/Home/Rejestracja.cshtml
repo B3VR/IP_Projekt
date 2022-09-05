@@ -43,6 +43,21 @@
     <div class="col-md-12">
         <form method="post" asp-action="Register" asp-controller="Account">
             <div asp-validation-summary="All" class="text-danger"></div>
+
+            @*-----------------------------------------------------------------------*@
+            <div class="form-group">
+                <label asp-for="FirstName">Imię</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LastName">Nazwisko</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            @*-----------------------------------------------------------------------*@
+
             <div class="form-group">
                 <label asp-for="Email">Adres Email</label>
                 <input asp-for="Email" class="form-control" />
