@@ -25,8 +25,8 @@ namespace IP_Projekt.Views.Home.ViewModels
         [Required]
         public string LastName { get; set; }
 
-        [Required]
-        public string loc_typ { get; set; }
+        //[Required]
+        //public string loc_typ { get; set; }
 
     }
 }

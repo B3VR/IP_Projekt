@@ -46,13 +46,10 @@ namespace IP_Projekt.Controllers.AccountController
 
                 var result = await _userManager.CreateAsync(user, model.Password);
 
-                if (model.loc_typ == "lekarz")  { user.Typ = user_type.lekarz; }
-                if (model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
-                    await _userManager.UpdateAsync(user);
-
-
-
-                
+                //if (model.loc_typ == "lekarz")  { user.Typ = user_type.lekarz; }
+                //if (model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
+                user.Typ = user_type.pacjent;
+                await _userManager.UpdateAsync(user);
 
                 if (result.Succeeded)
                 {
