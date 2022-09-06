@@ -1,44 +1,28 @@
 ﻿@using IP_Projekt.Views.Home.ViewModels
 @model LogowanieViewModel
 
-@*@{
+<style>
+.przycisk {
+  background-color: #28F7B2; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+@{
     ViewData["Title"] = "Logowanie";
 }
 
-
-<h2>Logowanie</h2>
-<hr />
-@using (Html.BeginForm())
-{
-    <div class = "cointainer mt-5">
-        <div class = "row justify-content-center align-items-center>
-            <div class = "col-sm-12 col-md-12 col-lg-4">
-                <form method="post"></form>
-                <div asp-validation-summary="All" class="text-danger"></div>
-    
-                
-                <label class = "form-label">Adres email:</label>
-                @Html.TextBoxFor(m => m.Email)
-                
-                
-                <label class = "form-label">Hasło:</label>
-                @Html.PasswordFor(m => m.Password)
-    
-
-                <input type = "submit" value="Zaloguj się" class="btn btn-default" />
-
-
-
-                <input type = "button" class="btn btn-default" value="Nie masz konta? Zarejestruj się" onclick="location.href='@Url.Action("Rejestracja", "Home")'" />
-
-        </div>
-    </div>*@
-
-@{
-    ViewData["Title"] = "Zaloguj się";
-}
-
-<h1>Login</h1>
+<h1>Zaloguj się</h1>
 
 <div class="row">
     <div class="col-md-12">
@@ -63,12 +47,12 @@
                 </div>
 
             </div>
-            <button type="submit" class="btn-primary">Zaloguj się</button>
+            <button type="submit" class="przycisk">Zaloguj się</button>
         </form>
 
     </div>
 </div>
 
 
-<input type = "button" class = "btn-primary" value= "Nie masz konta? Zarejestruj się!" onclick="location.href='@Url.Action("Rejestracja", "Home")'" />
+<input type = "button" class = "przycisk" value= "Nie masz konta? Zarejestruj się!" onclick="location.href='@Url.Action("Rejestracja", "Home")'" />
 

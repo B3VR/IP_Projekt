@@ -1,51 +1,34 @@
 ﻿@using IP_Projekt.DB.Models;
 @model RejestracjaViewModel
 
-@*<div class = "cointainer mt-5">
-    <div class = "row justify-content-center align-items-center>
-        <div class = "col-sm-12 col-md-12 col-lg-4">
-            <h1 class = "mb-3" >Rejestracja</h1>
-            <form method="post"></form>
-            <div asp-validation-summary="All" class="text-danger"></div>
-            
-            <div class = "mb-3">
-                <label class="form-label" asp-for = "email">Adres email:</label>
-                <input type="text" asp-for = "email" class="form-control"/>
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-
-            <div class = "mb-3">
-                <label class="form-label" asp-for = "haslo">Hasło:</label>
-                <input type="password" asp-for = "haslo" class="form-control"/>
-                <span asp-validation-for="haslo" class="text-danger"></span>
-            </div>
-
-            <div class = "mb-3">
-                <label class="form-label" asp-for = "potwierdz_haslo">Powtórz hasło:</label>
-                <input type="password" asp-for = "potwierdz_haslo" class="form-control"/>
-                <span asp-validation-for="potwierdz_haslo" class="text-danger"></span>
-            </div>
-
-            <div class = "mb-3">
-                <a asp-controller="Home" asp-action="Index" type="submit" class="btn btn-primary">Zarejestruj konto</a>
-            </div>
-
-        </div>
-    </div>
-</div>*@
-
-@{
-    ViewData["Title"] = "Register";
+<style>
+.przycisk {
+  background-color: #28F7B2; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-<h1>Register</h1>
+
+</style>
+
+@{
+    ViewData["Title"] = "Rejestracja";
+}
+
+<h1>Zarejestruj się</h1>
 
 <div class="row">
     <div class="col-md-12">
         <form method="post" asp-action="Register" asp-controller="Account">
             <div asp-validation-summary="All" class="text-danger"></div>
 
-            @*-----------------------------------------------------------------------*@
             <div class="form-group">
                 <label asp-for="FirstName">Imię</label>
                 <input asp-for="FirstName" class="form-control" />
@@ -57,7 +40,6 @@
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
-            @*-----------------------------------------------------------------------*@
 
             <div class="form-group">
                 <label asp-for="Email">Adres Email</label>
@@ -75,12 +57,15 @@
                 <label asp-for="ConfirmPassword">Potwierdź hasło</label>
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div> 
+                       
+            <div class="form-group">
+                
+                <input type = "radio" name = "loc_typ" value = "lekarz" >Lekarz</>
+                <input type = "radio" name = "loc_typ" value = "pacjent">Pacjent</>
             </div>
 
-            <input type = "radio" name = "loc_typ" value = "lekarz" >Lekarz</>
-            <input type = "radio" name = "loc_typ" value = "pacjent">Pacjent</>
-
-            <button type="submit" class="btn-primary">Zarejestruj się</button>
+            <button type="submit" class="przycisk">Zarejestruj się</button>
         </form>
 
     </div>

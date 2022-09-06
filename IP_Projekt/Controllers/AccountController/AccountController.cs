@@ -18,10 +18,14 @@ namespace IP_Projekt.Controllers.AccountController
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            
-            
+
         }
         //--------------------------------------------
+        public void Bag(User user)
+        {
+            TempData["UserName"] = user.UserName;
+        }
+
         public IActionResult Register()
         {
             return View();
@@ -34,7 +38,7 @@ namespace IP_Projekt.Controllers.AccountController
             {
                 var user = new User
                 {
-                    UserName = model.FirstName + model.LastName,
+                    UserName = model.FirstName +' ' + model.LastName,
                     Email = model.Email,
                 };
                 
@@ -42,16 +46,21 @@ namespace IP_Projekt.Controllers.AccountController
 
                 var result = await _userManager.CreateAsync(user, model.Password);
 
-                if (model.loc_typ == "lekarz")  { user.setTyp(user_type.lekarz); }
-                if (model.loc_typ == "pacjent") { user.setTyp(user_type.pacjent); }
+                if (model.loc_typ == "lekarz")  { user.Typ = user_type.lekarz; }
+                if (model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
+                    await _userManager.UpdateAsync(user);
 
-                await _userManager.UpdateAsync(user);
+
+
+                
 
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     //return RedirectToAction("index", "Home");
+                    Bag(user);
+                    
                     return RedirectToAction("Welcome", "Home");
                 }
 
@@ -70,7 +79,7 @@ namespace IP_Projekt.Controllers.AccountController
         [AllowAnonymous]
         public IActionResult Login()
         {
-            return View();
+            return View("~/Views/Home/Index.cshtml");
         }
         [HttpPost]
         [AllowAnonymous]
@@ -97,6 +106,7 @@ namespace IP_Projekt.Controllers.AccountController
                 if (result.Succeeded)
                 {
                     //return RedirectToAction("Index", "Home");
+                    Bag(user2);
                     return RedirectToAction("Welcome", "Home");
                 }
 
@@ -110,7 +120,7 @@ namespace IP_Projekt.Controllers.AccountController
         {
             await _signInManager.SignOutAsync();
 
-            return RedirectToAction("Login");
+            return RedirectToAction("Login", "Account");
         }
         //--------------------------------------------
 
