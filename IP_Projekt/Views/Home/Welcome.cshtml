@@ -47,12 +47,17 @@
 
     <div style="position:absolute; top:35%; right:50%; text-align:center">
         <div class = "menu">
+            @{
+                if (Model != null && Model.currentUser.Typ.Equals(user_type.lekarz))
+                        {
+                    <div class = "mb-3">
+                        <a asp-controller="NowaWizyta" asp-action="Index" type="submit" class="przycisk " >Umów wizytę</a>                     
+                    </div>
+                }
+            }
+                
                 <div class = "mb-3">
-                        <a asp-controller="Chat" asp-action="Chat" type="submit" class="przycisk " >Komunikator</a>                     
-                </div>
-
-                <div class = "mb-3">
-                        <a asp-controller="Wizyta" asp-action="Wizyta" type="submit" class="przycisk " >Wizyty</a>                     
+                        <a asp-controller="Wizyta" asp-action="Wizyta" type="submit" class="przycisk " >Moje wizyty</a>                     
                 </div>
 
                 <div class = "mb-3">

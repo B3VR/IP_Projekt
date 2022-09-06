@@ -3,6 +3,7 @@ using IP_Projekt.DB;
 using IP_Projekt.DB.Models;
 using IP_Projekt.DB.Repositories.ChatRepositories;
 using IP_Projekt.DB.Repositories.DLoginRepositories;
+using IP_Projekt.DB.Repositories.WizytaRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<IpprojContext>(
     );
 builder.Services.AddTransient<IDLoginRepository, DLoginRepository>();
 builder.Services.AddTransient<IChatRepository, ChatRepository>();
+builder.Services.AddTransient<IWizytaRepository, WizytaRepository>();
 builder.Services.AddDefaultIdentity<User>(options => { options.User.AllowedUserNameCharacters += @" "; }).AddEntityFrameworkStores<IpprojContext>();
 //builder.Services.AddIdentity<User<string>, IdentityRole<string>>()
 //                    .AddEntityFrameworkStores<IpprojContext>();
@@ -38,6 +40,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 
 app.MapControllerRoute(

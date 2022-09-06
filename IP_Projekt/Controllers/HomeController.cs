@@ -1,9 +1,11 @@
 ﻿using IP_Projekt.DB.Models;
 using IP_Projekt.DB.Repositories.ChatRepositories;
 using IP_Projekt.DB.Repositories.DLoginRepositories;
+using IP_Projekt.Views.Home.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
+using System.Security.Claims;
 
 namespace IP_Projekt.Controllers
 {
@@ -12,12 +14,14 @@ namespace IP_Projekt.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IDLoginRepository _iDLoginRepository;
         private readonly IChatRepository _chatRepository;
+        private readonly UserManager<User> _userManager;
 
-        public HomeController(ILogger<HomeController> logger, IDLoginRepository iDLoginRepository, IChatRepository chatRepository)
+        public HomeController(ILogger<HomeController> logger, IDLoginRepository iDLoginRepository, IChatRepository chatRepository, UserManager<User> userManager)
         {
             _logger = logger;
             _iDLoginRepository = iDLoginRepository;
             _chatRepository = chatRepository;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -30,7 +34,26 @@ namespace IP_Projekt.Controllers
             return View();
         }
 
-        public IActionResult Welcome()
+        public async Task<IActionResult> Welcome()
+        {
+            ClaimsPrincipal currentUser = this.User;
+            var currentUserName = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            User? user = await _userManager.FindByIdAsync(currentUserName);
+
+            WelcomeViewModel model = new WelcomeViewModel()
+            {
+                currentUser = user
+            };
+
+            return View(model);
+        }
+
+        public IActionResult Welcome2()
+        {
+            return View();
+        }
+
+        public IActionResult Funkcje()
         {
             return View();
         }
