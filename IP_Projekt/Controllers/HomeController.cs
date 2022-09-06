@@ -34,5 +34,15 @@ namespace IP_Projekt.Controllers
         {
             return View();
         }
+
+        public IActionResult Welcome2()
+        {
+            return View();
+        }
+
+        public IActionResult Funkcje()
+        {
+            return View();
+        }
     }
 }

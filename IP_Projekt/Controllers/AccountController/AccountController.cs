@@ -57,8 +57,10 @@ namespace IP_Projekt.Controllers.AccountController
 
                     //return RedirectToAction("index", "Home");
                     Bag(user);
-                    
-                    return RedirectToAction("Welcome", "Home");
+
+                    if(user.Typ == user_type.administrator) { return RedirectToAction("Welcome2", "Home");}
+                    else
+                    { return RedirectToAction("Welcome", "Home"); }
                 }
 
                 foreach (var error in result.Errors)
@@ -99,12 +101,14 @@ namespace IP_Projekt.Controllers.AccountController
                 var user2 = await _userManager.FindByEmailAsync(user.Email);
                 var result = await _signInManager.PasswordSignInAsync(user2.UserName, user.Password, user.RememberMe, false);
 
-
                 if (result.Succeeded)
                 {
                     //return RedirectToAction("Index", "Home");
                     Bag(user2);
-                    return RedirectToAction("Welcome", "Home");
+
+                    if (user2.Typ == user_type.administrator) { return RedirectToAction("Welcome2", "Home"); }
+                    else
+                    { return RedirectToAction("Welcome", "Home"); }
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
@@ -120,6 +124,15 @@ namespace IP_Projekt.Controllers.AccountController
             return RedirectToAction("Login", "Account");
         }
         //--------------------------------------------
+        public async Task<IActionResult> Zmiana(WelcomeViewModel model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if(model.loc_typ == "lekarz") { user.Typ = user_type.lekarz; }
+            if(model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
+
+            await _userManager.UpdateAsync(user);
+            return RedirectToAction("Welcome2", "Home");
+        }
 
     }
 }

@@ -1,0 +1,48 @@
+﻿@using IP_Projekt.Views.Home.ViewModels
+@model WelcomeViewModel
+
+<style>
+.przycisk {
+  background-color: #28F7B2; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+@{
+    ViewData["Title"] = "Zmiana funcji osoby";
+}
+
+<h1>Zmień funkcję osoby</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" asp-action="Zmiana" asp-controller="Account">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email">Adres Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                
+                <input type = "radio" name = "loc_typ" value = "lekarz" >Lekarz</>
+                <input type = "radio" name = "loc_typ" value = "pacjent">Pacjent</>
+            </div>
+
+            <button type="submit" class="przycisk">Zmień funkcję</button>
+        </form>
+
+    </div>
+</div>
+

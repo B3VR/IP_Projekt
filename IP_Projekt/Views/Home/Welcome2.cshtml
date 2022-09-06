@@ -1,0 +1,88 @@
+﻿@using IP_Projekt.DB.Models;
+@model WelcomeViewModel
+
+<style>
+.przycisk {
+  background-color: #28F7B2; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  width: 100%;
+}
+</style>
+
+@*-----------------------------------------*@
+<style>
+.przycisk2 {
+  background-color: #FA0C0C;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  width: 100%;
+}
+</style>
+@*-----------------------------------------*@
+
+<style>
+.menu { 
+  width: 100%;
+  table-layout: fixed;
+}
+.menu przycisk_menu { 
+  width: 100%;
+  background-color: #28F7B2; 
+}
+</style>
+
+@{
+    ViewData["Title"] = "Home";
+    
+}
+@{
+    <h1 style="">
+            <span>Witaj</span>
+            <span style="color: dimgray">@TempData["UserName"]</span>
+    </h1>
+
+    <div style="position:absolute; top:0px; right:0px;">
+                    <div class = "mb-3">
+                            <a asp-controller="Account" asp-action="Logout" type="submit" class="przycisk " >Wyloguj się</a>                     
+                    </div>
+    </div>
+
+    <div style="position:absolute; top:35%; right:50%; text-align:center">
+            <div class = "menu">
+                    <div class = "mb-3">
+                            <a asp-controller="Chat" asp-action="Chat" type="submit" class="przycisk " >Komunikator</a>                     
+                    </div>
+
+                    <div class = "mb-3">
+                            <a asp-controller="Wizyta" asp-action="Wizyta" type="submit" class="przycisk " >Wizyty</a>                     
+                    </div>
+
+                    <div class = "mb-3">
+                            <a asp-controller="ListaBadan" asp-action="Index" type="submit" class="przycisk " >Lista Badań</a>                     
+                    </div>
+
+                    <div class = "mb-3">
+                            <a asp-controller="Home" asp-action="Funkcje" type="submit" class="przycisk2 " >Ustawianie lekarzy</a>                     
+                    </div>
+             </div>
+    </div>
+
+
+}

@@ -1,4 +1,5 @@
-﻿@*
+﻿@model WizytaViewModel
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 <div class="card h-100 w-100">
@@ -8,19 +9,30 @@
     <div class="card-body h-75">
         <div class="row">
             <div class="card col-7 bg-light">
+                    @*------------------------------------------------------------*@
+                    <div class="mt-5">
+                        <div class="col">
+                            <label asp-for = "Opis">Opis choroby podany przez pacjenta</label>
+                            <textarea asp-for = "Opis" class="h-100 w-150 form-control" disabled = "disabled"></textarea>
+                        </div>
+                    </div>
+                    @*------------------------------------------------------------*@
                 <div class="row" style="height: 200px">
+                    @*------------------------------------------------------------*@
                     <div class="col">
-                        <label>Przebieg wizyty</label>
-                        <textarea class="h-100 w-75 form-control"></textarea>
+                        <label asp-for = "Przebieg_wizyty">Przebieg wizyty</label>
+                        <textarea asp-for = "Przebieg_wizyty" class="h-100 w-75 form-control"></textarea>
                     </div>
+                    @*------------------------------------------------------------*@
                     <div class="col">
-                        <label>Przepisane leki</label>
-                        <textarea class="h-100 w-75 form-control"></textarea>
+                        <label asp-for = "Przepisane_leki" >Przepisane leki</label>
+                        <textarea asp-for = "Przepisane_leki" class="h-100 w-75 form-control"></textarea>
                     </div>
+                    @*------------------------------------------------------------*@
                 </div>
                <div class="h-50 w-75 mt-5">
-                   <label>Stwierdzona choroba</label>
-                   <select class="w-50 form-control">
+                   <label asp-for = "Stwierdzona_choroba">Stwierdzona choroba</label>
+                   <select asp-for = "Stwierdzona_choroba" class="w-50 form-control">
                        <option>I15 Nadciśnienie wtórne</option>
                        <option>I20 Choroba niedokrwienna serca</option>
                        <option>I22 Ponowny zawał serca</option>
