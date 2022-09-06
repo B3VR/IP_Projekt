@@ -126,12 +126,18 @@ namespace IP_Projekt.Controllers.AccountController
         //--------------------------------------------
         public async Task<IActionResult> Zmiana(WelcomeViewModel model)
         {
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if(model.loc_typ == "lekarz") { user.Typ = user_type.lekarz; }
-            if(model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (model.loc_typ == "lekarz") { user.Typ = user_type.lekarz; }
+                if (model.loc_typ == "pacjent") { user.Typ = user_type.pacjent; }
 
-            await _userManager.UpdateAsync(user);
-            return RedirectToAction("Welcome2", "Home");
+                await _userManager.UpdateAsync(user);
+                return RedirectToAction("Welcome2", "Home");
+
+                ModelState.AddModelError(string.Empty, "Podaj adres email i wybierz funkcję.");
+            }
+            return RedirectToAction("Funkcje", "Home");
         }
 
     }
