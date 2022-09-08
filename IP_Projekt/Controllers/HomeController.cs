@@ -11,16 +11,11 @@ namespace IP_Projekt.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IDLoginRepository _iDLoginRepository;
-        private readonly IChatRepository _chatRepository;
+        
         private readonly UserManager<User> _userManager;
 
-        public HomeController(ILogger<HomeController> logger, IDLoginRepository iDLoginRepository, IChatRepository chatRepository, UserManager<User> userManager)
+        public HomeController(UserManager<User> userManager)
         {
-            _logger = logger;
-            _iDLoginRepository = iDLoginRepository;
-            _chatRepository = chatRepository;
             _userManager = userManager;
         }
 
@@ -58,14 +53,5 @@ namespace IP_Projekt.Controllers
             return View();
         }
 
-        public IActionResult Welcome2()
-        {
-            return View();
-        }
-
-        public IActionResult Funkcje()
-        {
-            return View();
-        }
     }
 }
