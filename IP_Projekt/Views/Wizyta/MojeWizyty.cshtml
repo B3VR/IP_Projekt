@@ -1,0 +1,32 @@
+﻿@using IP_Projekt.DB.Models
+@using IP_Projekt.Views.Wizyta.ViewModels
+@model MojeWizytyViewModel
+
+<div class="container-fluid">
+        <div class="list-group overflow-auto">
+            @{
+                foreach (var wizyta in Model.wizyty)
+                {
+                        <a class="card list-group-item m-3" asp-action="Wizyta" asp-controller="Wizyta" asp-route-id="@wizyta.id">
+                            <div class="card-body">
+                                @{
+                                    if (Model.currentUser.Typ.Equals(user_type.pacjent))
+                                    {
+                                        <label>@wizyta.doctorName</label>
+                                    }
+                                    else if (Model.currentUser.Typ.Equals(user_type.lekarz))
+                                    {
+                                        <label>@wizyta.patientName</label>
+                                    }
+                                }
+                            </div>
+                            <div class="card-body">
+                                <label>@wizyta.data.ToString()</label>
+                            </div>
+                        </a>
+                }
+            }
+        </div>
+</div>
+
+

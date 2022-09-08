@@ -23,5 +23,10 @@ namespace IP_Projekt.DB.Models
         public statusWizytyEnum status { get; set; }
         [Column("opis_objawow")]
         public string opisObjawow { get; set; }
+        [Column("doctor_name")]
+        public string doctorName { get; set; }
+        [Column("patient_name")]
+        public string patientName { get; set; }
+
     }
 }

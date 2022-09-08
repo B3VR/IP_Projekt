@@ -38,9 +38,13 @@ namespace IP_Projekt.Controllers.NowaWIzyta
             var currentUserName = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
             User? user = await _userManager.FindByIdAsync(currentUserName);
 
+            User lekarz = await _ipprojContext.users.FindAsync(model.lekarzId);
+
             Wizyta wizyta = new Wizyta()
             {
                 lekarzId = model.lekarzId,
+                patientName = user.UserName,
+                doctorName = lekarz.UserName,
                 pacjentId = user.Id,
                 opisObjawow = model.opisObjawow,
                 data = model.dataWizyty,

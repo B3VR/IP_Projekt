@@ -1,4 +1,5 @@
 ﻿using IP_Projekt.DB.Models;
+using IP_Projekt.DB.Models.Enums;
 
 namespace IP_Projekt.DB.Repositories.WizytaRepositories
 {
@@ -17,6 +18,8 @@ namespace IP_Projekt.DB.Repositories.WizytaRepositories
             _ipprojContext.SaveChanges();
         }
 
+        public Wizyta pobierzWizyte(int id) => _ipprojContext.wizyty.SingleOrDefault(x => x.id == id);
+
         public Wizyta pobierzAktualnaWizyteLekarza(string idLekarza)
         {
             throw new NotImplementedException();
@@ -34,12 +37,16 @@ namespace IP_Projekt.DB.Repositories.WizytaRepositories
 
         public ICollection<Wizyta> pobierzWizytyPacjenta(string idPacjenta)
         {
-            return _ipprojContext.wizyty.Where(x => x.pacjentId == idPacjenta).ToList();
+            var lista = _ipprojContext.wizyty.Where(x => x.pacjentId == idPacjenta);
+            return lista.ToList();
         }
 
         public void rozpocznijWizyte(int id)
         {
-            throw new NotImplementedException();
+            Wizyta wizyta = _ipprojContext.wizyty.SingleOrDefault(x => x.id == id);
+            wizyta.status = statusWizytyEnum.wTrakie;
+
+            _ipprojContext.SaveChanges();
         }
 
         public void usunWizyte(int id)
@@ -49,7 +56,10 @@ namespace IP_Projekt.DB.Repositories.WizytaRepositories
 
         public void zamknijWizyte(int id)
         {
-            throw new NotImplementedException();
+            Wizyta wizyta = _ipprojContext.wizyty.SingleOrDefault(x => x.id == id);
+            wizyta.status = statusWizytyEnum.zakonczona;
+
+            _ipprojContext.SaveChanges();
         }
     }
 }

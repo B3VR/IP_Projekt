@@ -12,5 +12,7 @@ namespace IP_Projekt.DB.Repositories.WizytaRepositories
         public ICollection<Wizyta> pobierzWizytyLekarza(string idLekarza);
         public Wizyta pobierzAktualnaWizytePacjenta(string idPacjenta);
         public Wizyta pobierzAktualnaWizyteLekarza(string idLekarza);
+
+        public Wizyta pobierzWizyte(int id);
     }
 }

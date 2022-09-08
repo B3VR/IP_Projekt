@@ -23,9 +23,10 @@ namespace IP_Projekt.DB
 
         public DbSet<Wizyta> wizyty { get; set; }
         public DbSet<DLogin> dLogins { get; set; }
-        public DbSet<Msg> Msgs { get; set; } 
+        public DbSet<Msg> Msgs { get; set; }
         public DbSet<Chat> Chats { get; set; }
         public DbSet<User> users { get; set; }  //<----- Pole obsługujące Usera
+        public DbSet<RezultatWizyty> rezultatWizyty { get; set; }
 
     }
 }

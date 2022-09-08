@@ -48,7 +48,7 @@
     <div style="position:absolute; top:35%; right:50%; text-align:center">
         <div class = "menu">
             @{
-                if (Model != null && Model.currentUser.Typ.Equals(user_type.lekarz))
+                if (Model != null && Model.currentUser.Typ.Equals(user_type.pacjent))
                         {
                     <div class = "mb-3">
                         <a asp-controller="NowaWizyta" asp-action="Index" type="submit" class="przycisk " >Umów wizytę</a>                     
@@ -57,11 +57,11 @@
             }
                 
                 <div class = "mb-3">
-                        <a asp-controller="Wizyta" asp-action="Wizyta" type="submit" class="przycisk " >Moje wizyty</a>                     
+                        <a asp-controller="Wizyta" asp-action="MojeWizyty" type="submit" class="przycisk " >Moje wizyty</a>                     
                 </div>
 
                 <div class = "mb-3">
-                        <a asp-controller="ListaBadan" asp-action="Index" type="submit" class="przycisk " >Lista Badań</a>                     
+                        <a asp-controller="Wizyta" asp-action="Index" type="submit" class="przycisk " >Lista Badań</a>                     
                 </div>
          </div>
     </div>
