@@ -7,7 +7,7 @@ using IP_Projekt.DB.Repositories.WizytaRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-
+using IP_Projekt.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,7 +21,7 @@ builder.Services.AddTransient<IWizytaRepository, WizytaRepository>();
 builder.Services.AddDefaultIdentity<User>(options => { options.User.AllowedUserNameCharacters += @" "; }).AddEntityFrameworkStores<IpprojContext>();
 //builder.Services.AddIdentity<User<string>, IdentityRole<string>>()
 //                    .AddEntityFrameworkStores<IpprojContext>();
-
+builder.Services.AddSignalR();
 
 
 var app = builder.Build();
@@ -47,4 +47,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapHub<ChatHub>("/chatHub");
 app.Run();
