@@ -3,16 +3,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IP_Projekt.DB.Models
 {
-    [Table("RezultatWizyty")]
+    [Table("VisitResult")]
     public class RezultatWizyty
     {
         [Key]
-        public int ID { get; set; }
+        public int id { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int wizytaId;
-        public int stwierdzonaChorobaId;
-        public string przebiegWizyty;
-        public string przepisaneLeki;
+        [Column("visitId")]
+        public int wizytaId { get; set; }
+
+        [Column("chorobaId")]
+        public int stwierdzonaChorobaId { get; set; }
+        [Column("przebiegWizyty")]
+        public string przebiegWizyty { get; set; }
+        [Column("przepisaneLeki")]
+        public string przepisaneLeki { get; set; }
     }
 }

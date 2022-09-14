@@ -68,7 +68,7 @@ namespace IP_Projekt.Controllers.NewFolder
         }
 
         [HttpPost]
-        public void zakonczWizyte(WizytaViewModel model)
+        public IActionResult zakonczWizyte(WizytaViewModel model)
         {
             _wizytaRepository.zamknijWizyte(model.wizyta_id);
 
@@ -80,10 +80,10 @@ namespace IP_Projekt.Controllers.NewFolder
                 stwierdzonaChorobaId = model.Stwierdzona_choroba 
             };
 
-            _ipprojContext.rezultatWizyty.Add(rezultat);
+            _ipprojContext.Add(rezultat);
             _ipprojContext.SaveChanges();
 
-            RedirectToAction("Welcome", "Home");
+            return RedirectToAction("Welcome", "Home");
         }
     }
 }
