@@ -1,4 +1,5 @@
 ﻿@using IP_Projekt.DB.Models
+@using IP_Projekt.DB.Models.Enums
 @using IP_Projekt.Views.Wizyta.ViewModels
 @model MojeWizytyViewModel
 
@@ -7,23 +8,67 @@
             @{
                 foreach (var wizyta in Model.wizyty)
                 {
-                        <a class="card list-group-item m-3" asp-action="Wizyta" asp-controller="Wizyta" asp-route-id="@wizyta.id">
-                            <div class="card-body">
-                                @{
-                                    if (Model.currentUser.Typ.Equals(user_type.pacjent))
-                                    {
-                                        <label>@wizyta.doctorName</label>
+                    if (wizyta.status.Equals(statusWizytyEnum.zakonczona))
+                    {
+                        <a class="card list-group-item m-3 alert-danger disabled" asp-action="Wizyta" asp-controller="Wizyta" asp-route-id="@wizyta.id">
+                                <div class="card-body alert-danger">
+                                    @{
+                                        if (Model.currentUser.Typ.Equals(user_type.pacjent))
+                                        {
+                                            <label>@wizyta.doctorName</label>
+                                        }
+                                        else if (Model.currentUser.Typ.Equals(user_type.lekarz))
+                                        {
+                                            <label>@wizyta.patientName</label>
+                                        }
                                     }
-                                    else if (Model.currentUser.Typ.Equals(user_type.lekarz))
-                                    {
-                                        <label>@wizyta.patientName</label>
-                                    }
-                                }
-                            </div>
-                            <div class="card-body">
-                                <label>@wizyta.data.ToString()</label>
-                            </div>
+                                </div>
+                                <div class="card-body alert-danger">
+                                    <label>@wizyta.data.ToString()</label>
+                                </div>
                         </a>
+                    }
+                    else if (wizyta.data < DateTime.Now && !wizyta.status.Equals(statusWizytyEnum.zakonczona))
+                    {
+                        <a class="card list-group-item m-3 alert-success" asp-action="Wizyta" asp-controller="Wizyta" asp-route-id="@wizyta.id">
+                                    <div class="card-body alert-success">
+                                        @{
+                                            if (Model.currentUser.Typ.Equals(user_type.pacjent))
+                                            {
+                                                <label>@wizyta.doctorName</label>
+                                            }
+                                            else if (Model.currentUser.Typ.Equals(user_type.lekarz))
+                                            {
+                                                <label>@wizyta.patientName</label>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="card-body alert-success">
+                                        <label>@wizyta.data.ToString()</label>
+                                    </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="card list-group-item m-3 alert-primary disabled" asp-action="Wizyta" asp-controller="Wizyta" asp-route-id="@wizyta.id">
+                                        <div class="card-body alert-primary">
+                                            @{
+                                                if (Model.currentUser.Typ.Equals(user_type.pacjent))
+                                                {
+                                                    <label>@wizyta.doctorName</label>
+                                                }
+                                                else if (Model.currentUser.Typ.Equals(user_type.lekarz))
+                                                {
+                                                    <label>@wizyta.patientName</label>
+                                                }
+                                            }
+                                        </div>
+                                        <div class="card-body alert-primary">
+                                            <label>@wizyta.data.ToString()</label>
+                                        </div>
+                        </a>
+                    }
+                        
                 }
             }
         </div>

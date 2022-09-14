@@ -3,7 +3,7 @@
 @model WizytaViewModel
 
     @{
-        if (Model.user.Typ.Equals(user_type.pacjent))
+        if (Model.user.Typ.Equals(user_type.lekarz))
         {
             <form method="post" asp-action="zakonczWizyte" asp-controller="Wizyta">
                 <input asp-for="wizyta_id" class="invisible">

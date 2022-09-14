@@ -35,35 +35,39 @@
 }
 @{
     <h1 style="">
-        <span>Witaj</span>
-        <span style="color: dimgray">@TempData["UserName"]</span>
+            <span>Witaj</span>
+            <span style="color: dimgray">@TempData["UserName"]</span>
     </h1>
 
     <div style="position:absolute; top:0px; right:0px;">
-                <div class = "mb-3">
-                        <a asp-controller="Account" asp-action="Logout" type="submit" class="przycisk " >Wyloguj się</a>                     
-                </div>
+                    <div class = "mb-3">
+                            <a asp-controller="Account" asp-action="Logout" type="submit" class="przycisk " >Wyloguj się</a>                     
+                    </div>
     </div>
 
     <div style="position:absolute; top:35%; right:50%; text-align:center">
-        <div class = "menu">
-            @{
+            <div class = "menu">
+                @{
                 if (Model != null && Model.currentUser.Typ.Equals(user_type.pacjent))
-                        {
-                    <div class = "mb-3">
-                        <a asp-controller="NowaWizyta" asp-action="Index" type="submit" class="przycisk " >Umów wizytę</a>                     
-                    </div>
+                {
+                            <div class = "mb-3">
+                                <a asp-controller="NowaWizyta" asp-action="Index" type="submit" class="przycisk " >Umów wizytę</a>                     
+                            </div>
                 }
-            }
-                
-                <div class = "mb-3">
-                        <a asp-controller="Wizyta" asp-action="MojeWizyty" type="submit" class="przycisk " >Moje wizyty</a>                     
-                </div>
-
-                <div class = "mb-3">
-                        <a asp-controller="Wizyta" asp-action="Index" type="submit" class="przycisk " >Lista Badań</a>                     
-                </div>
-         </div>
+                }
+                    
+                    <div class = "mb-3">
+                            <a asp-controller="Wizyta" asp-action="MojeWizyty" type="submit" class="przycisk " >Moje wizyty</a>                     
+                    </div>
+                @{
+                        if (Model != null && Model.currentUser.Typ.Equals(user_type.lekarz))
+                        {
+                                    <div class = "mb-3">
+                                        <a asp-controller="ListaBadan" asp-action="Index" type="submit" class="przycisk " >Lista Badań</a>                     
+                                    </div>
+                        }
+                 }
+            </div>
     </div>
 
 
