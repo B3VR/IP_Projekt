@@ -126,7 +126,7 @@ namespace IP_Projekt.Controllers.AccountController
         //--------------------------------------------
         public async Task<IActionResult> Zmiana(WelcomeViewModel model)
         {
-            if (ModelState.IsValid)
+            if (model.Email != null && model.loc_typ != null)
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (model.loc_typ == "lekarz") { user.Typ = user_type.lekarz; }
