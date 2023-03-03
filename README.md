@@ -1,1 +1,1 @@
-University project. Hospital informatorom system
+University project. Hospital information system
